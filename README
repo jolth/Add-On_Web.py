@@ -1,0 +1,35 @@
+
+dbToXML():
+
+>>> import web
+>>> import dbToXML
+>>> db = web.database(dbn='postgres', user='postgres', pw='qwerty', db='gmys')
+>>> 
+>>> dbToXML.dbToXML(db, ('pais',), ('codigo', 'descrip'))
+
+>>> xml = dbToXML.dbToXML(db, ('pais',), ('codigo', 'descrip'))
+>>> xml.xmldoc.toxml()
+'<?xml version="1.0" ?><pais><content><codigo>013</codigo><descrip>afganistan</descrip></content><content><codigo>017</codigo><descrip>albania</descrip></content><content><codigo>023</codigo><descrip>alemania</descrip></content> 
+....
+</pais>'
+
+
+
+
+
+
+
+
+------------------------------------------
+
+
+>>> import web
+>>> 
+>>> db = web.database(dbn='postgres', user='postgres', pw='qwerty', db='gmys')
+>>> a =db.query("SELECT codigo, descrip FROM pais")
+>>> dir(a)
+['__doc__', '__getitem__', '__init__', '__iter__', '__len__', '__module__', '__nonzero__', 'c', 'i', 'list']
+>>>
+
+
+
