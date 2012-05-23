@@ -3,7 +3,7 @@ dbToXML():
 
 >>> import web
 >>> import dbToXML
->>> db = web.database(dbn='postgres', user='postgres', pw='qwerty', db='gmys')
+>>> db = web.database(dbn='postgres', user='postgres', pw='qwerty', db='myweb')
 >>> 
 >>> dbToXML.dbToXML(db, ('pais',), ('codigo', 'descrip'))
 
