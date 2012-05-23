@@ -58,7 +58,7 @@ class dbToXML(object):
         
         def g(k, v):
             element = self.xmldoc.createElement(k) 
-            text = self.xmldoc.createTextNode(v)
+            text = self.xmldoc.createTextNode(str(v))
 
             element.appendChild(text)
             content.appendChild(element)        
