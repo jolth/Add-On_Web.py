@@ -13,6 +13,11 @@ dbToXML():
 ....
 </pais>'
 
+>>> xml = dbToXML.dbToXML(db, ('usuarios',), ('docu', 'nombres', 'apellidos'))
+0.0 (2): SELECT docu, nombres, apellidos FROM usuarios
+>>> xml.xmldoc.toxml()
+'<?xml version="1.0" ?><usuarios><content><apellidos>Castro Ramirez</apellidos><nombres>Jose Andres</nombres><docu>1000000000</docu></content><content><apellidos>Lozano Montoya</apellidos><nombres>Felipe</nombres><docu>1580328151</docu></content></usuarios>'
+>>> 
 
 
 
